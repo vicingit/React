@@ -1,0 +1,50 @@
+* {
+  background-color: rgb(183, 162, 162);
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+}
+
+input, textarea{
+  margin-top: 15px;
+  height: 50px;
+  text-indent: 10px;
+  border-radius: 5px;
+  display: block;
+}
+
+label {
+  display: inline-block;
+  vertical-align: middle; /* Align the label vertically with the radio button */
+  margin-right: 10px;
+}
+
+/* Style the radio buttons to be hidden */
+input[type='radio'] {
+  display: none;
+}
+
+/* Style the custom radio button appearance */
+.radio-label {
+  display: flex; /* Make the container a flexbox */
+  align-items: center; /* Vertically center items */
+  margin-bottom: 10px; /* Add some spacing between options */
+}
+
+.radio-label input[type='radio'] + label::before {
+  content: ''; /* Create a pseudo-element for custom radio button */
+  display: inline-block;
+  width: 20px; /* Adjust the size of the radio button */
+  height: 20px;
+  border: 2px solid #000; /* Border for the radio button */
+  border-radius: 50%; /* Make it round */
+  margin-right: 10px; /* Add spacing between radio button and label text */
+}
+
+/* Style the radio button when checked */
+.radio-label input[type='radio']:checked + label::before {
+  background-color: #000; /* Change background color when checked */
+}
